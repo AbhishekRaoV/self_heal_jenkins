@@ -21,4 +21,4 @@ pipeline {
                 ], wait: false
         }
     }
-}
+
