@@ -5,13 +5,13 @@ pipeline {
     stages {
         stage('Hello') {
             steps {
-                echo 'Hello World'
+                eco 'Hello World'
             }
         }
     }
 
     post {
-        always {
+        failure {
             // Print the job name and build number before triggering the next pipeline
             echo "Job Name: ${JOB_NAME}"
             echo "Build Number: ${BUILD_NUMBER}"
