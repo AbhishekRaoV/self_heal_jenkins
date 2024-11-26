@@ -1,11 +1,10 @@
-
 pipeline {
     agent any
 
     stages {
         stage('Hello') {
             steps {
-                eco 'Hello World'
+                echo 'Hello World'
             }
         }
     }
@@ -23,4 +22,3 @@ pipeline {
         }
     }
 }
-
