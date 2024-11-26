@@ -1,3 +1,13 @@
+pipeline {
+    agent any
+    stages {
+        stage('Example') {
+            steps {
+                sh 'echo "Hello, World!"'
+            }
+        }
+    }
+}
 Started by user unknown or anonymous
 Obtained pipeline.groovy from git https://github.com/AbhishekRaoV/self_heal_jenkins.git
 org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:
