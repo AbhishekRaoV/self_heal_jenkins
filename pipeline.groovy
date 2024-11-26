@@ -1,10 +1,23 @@
-import os
+pipeline {
+    agent any
 
-# Define the path to the Jenkins job build log file
-log_file_path = "/var/lib/jenkins/jobs/sample/builds/lastStableBuild/log"
+    stages {
+        stage('Hello') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+    }
 
-# Check if the log file exists
-if not os.path.exists(log_file_path):
-    print("Log not found at", log_file_path)
-else:
-    print("Log found at", log_file_path)
+    // post {
+    //     failure {
+    //         // Print the job name and build number before triggering the next pipeline
+    //         echo "Job Name: ${JOB_NAME}"
+    //         echo "Build Number: ${BUILD_NUMBER}"
+            
+    //         build job: 'heal-pipeline', parameters: [
+    //                 string(name: 'PIPELINE_NAME', value: "${JOB_NAME}"),
+    //                 string(name: 'BUILD_NUMBER', value: "${BUILD_NUMBER}")
+    //             ], wait: false
+    //     }
+    // }
