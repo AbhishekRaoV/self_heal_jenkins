@@ -1,0 +1,1 @@
+Build log not found at /var/lib/jenkins/jobs/sample/builds/lastStableBuild/log
